@@ -1,0 +1,31 @@
+mgvi_cc_prebuilt_library_shared {
+    name: "libmtk_drvb.release.mt6893",
+    owner: "mtk",
+    proprietary: true,
+    arch: {
+        arm64: {
+            srcs: [
+                "arm64/libmtk_drvb.so",
+            ],
+        },
+        arm: {
+            srcs: [
+                "arm/libmtk_drvb.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "libc++",
+        "libc",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libm",
+        "libutils",
+    ],
+    enabled: true,
+    mgvi_so_name: "libmtk_drvb",
+    mgvi_platforms: [
+        "mt6893",
+    ],
+}
